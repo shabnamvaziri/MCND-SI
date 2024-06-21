@@ -1,0 +1,7 @@
+
+ Mon Jun 10 09:26:58 2024
+
+
+Input.txt | Input23.txt ;	10	35	10	2	|	deleted cuts = 16 	NumberFixed = 0	node = 8	gap = 0.000000	Final Upper Bound = 158836.800000	4.406289		|	 w: 	|	0	2	3	5	8	9	10	11	12	13	14	16	17	18	20	21	23	25	27	28	30	31	32	33		|	 x: 	|	13	1	|	18	1	|	21	0	|	RelaxedCuts:	 26	LazyCuts:	 2	UserCuts:	 20	
+Input.txt | Input24.txt ;	10	35	10	2	|	deleted cuts = 13 	NumberFixed = 5	node = 17	gap = 0.000000	Final Upper Bound = 193703.800000	5.210476		|	 w: 	|	0	2	3	5	8	9	11	12	13	14	16	17	18	20	21	23	25	27	28	30	31	32	33		|	 x: 	|	13	1	|	18	1	|	33	0	|	RelaxedCuts:	 26	LazyCuts:	 11	UserCuts:	 21	
+Input.txt | Input25.txt ;	10	35	10	2	|	deleted cuts = 15 	NumberFixed = 6	node = 32	gap = 0.000000	Final Upper Bound = 236026.800000	6.254992		|	 w: 	|	0	2	3	5	8	9	11	12	13	14	16	17	18	20	21	23	25	27	28	30	31	32	33		|	 x: 	|	9	1	|	12	1	|	21	0	|	RelaxedCuts:	 30	LazyCuts:	 7	UserCuts:	 32	
