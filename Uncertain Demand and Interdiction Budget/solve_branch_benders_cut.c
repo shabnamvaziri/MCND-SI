@@ -17,7 +17,7 @@ double* average;
 int				flag_incumb = 0;
 double* pos_theta;
 double* pos_w;
-int				chgobj, rLimmtCBobj, rLimmtCB, tLimmtCBobj, tLimmtCB; //Ibrahim//
+int				chgobj, rLimmtCBobj, rLimmtCB, tLimmtCBobj, tLimmtCB;
 int countbackLim;
 int countbackObj;
 //int countbackLimL;
