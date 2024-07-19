@@ -842,7 +842,7 @@ static int CPXPUBLIC user_cut_callback1(CPXCENVptr env, void* cbdata, int wheref
 	status = CPXgetcallbacknodeobjval(env, cbdata, wherefrom, objval);
 	status = CPXgetcallbacknodeobjval(env, cbdata, wherefrom, &cutinfo->nodeobjval);						//Obtain the objective value of the solution at the curent node
 	status = CPXgetcallbacknodeinfo(env, cbdata, wherefrom, 0, CPX_CALLBACK_INFO_NODE_SEQNUM, &SEQNUM);
-	/////////Ibrahim/////////
+	
 	status = CPXgetcallbacknodeinfo(env, cbdata, wherefrom, 0, CPX_CALLBACK_INFO_NODE_SEQNUM, &cutinfo->nodeid);
 	if (status) {
 		fprintf(stderr, "Failed to get node id.\n");
@@ -854,7 +854,7 @@ static int CPXPUBLIC user_cut_callback1(CPXCENVptr env, void* cbdata, int wheref
 		fprintf(stderr, "Failed to get depth.\n");
 		goto Terminate;
 	}
-	/////////Ibrahim/////////
+	
 
 	//printf("Best lb is %lf\n", best_lb);getchar();
 	globaldepth = depth;
@@ -898,7 +898,7 @@ static int CPXPUBLIC user_cut_callback1(CPXCENVptr env, void* cbdata, int wheref
 	rep_node++;
 	//				flag_upd_av = 1;
 	
-	///////////SHAAAAAAAAAAAAAAAAAAAAAAAABIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII//////
+	
 	for (sglobal = 0; sglobal < S; sglobal++) {
 		cutvio = SPViolated(temp_x);
 		if (flag[sglobal] == 1) {
@@ -948,7 +948,7 @@ static int CPXPUBLIC user_cut_callback1(CPXCENVptr env, void* cbdata, int wheref
 			flagVio = 1;
 		}
 	}
-	/////////////SHAAAAAAAAAAAAAAAAAAAAAAAABIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII///////////////
+	
 
 	if (flagVio > 0) {
 		*useraction_p = CPX_CALLBACK_SET;
@@ -1021,10 +1021,10 @@ static int CPXPUBLIC lazy_feas_callback1(CPXCENVptr env, void* cbdata, int where
 	numcols = cur_numcols;	//Transfer the information on the number of variables which we obtained at the make lazy constraint callback
 	//lazycalled++;
 	*useraction_p = CPX_CALLBACK_DEFAULT;
-	////////////// Ibrahim////////////
+	
 	int    oldnodeid = cutinfo->nodeid;
 	double oldnodeobjval = cutinfo->nodeobjval;
-	////////////// Ibrahim////////////
+	
 
 	//At this point, don't add any cuts. We are only starting to solve the separation problem
 	status = CPXgetcallbacknodex(env, cbdata, wherefrom, temp_x, 0, numcols - 1);									//Obtain the solution at the node
