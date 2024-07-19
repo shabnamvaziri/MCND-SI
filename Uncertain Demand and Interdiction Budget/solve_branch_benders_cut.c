@@ -1031,7 +1031,7 @@ static int CPXPUBLIC lazy_feas_callback1(CPXCENVptr env, void* cbdata, int where
 	status = CPXgetcallbacknodeobjval(env, cbdata, wherefrom, objval);
 	status = CPXgetcallbacknodeobjval(env, cbdata, wherefrom, &cutinfo->nodeobjval);		//Obtain the objective value of the solution at the curent node
 	status = CPXgetcallbacknodeinfo(env, cbdata, wherefrom, 0, CPX_CALLBACK_INFO_NODE_SEQNUM, &SEQNUM);
-	/////////Ibrahim/////////
+	
 	status = CPXgetcallbacknodeinfo(env, cbdata, wherefrom, 0, CPX_CALLBACK_INFO_NODE_SEQNUM, &cutinfo->nodeid);
 	if (status) {
 		fprintf(stderr, "Failed to get node id.\n");
